@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .sky{
+            width: 100%;
+            height: 500px;
+            background-color: #3f74ff;
+            position: relative;
+            animation: sky_background 40s ease-out infinite;
+        }
+        @keyframes sky_background {
+            0%{
+                background: #3ec8ff;
+            }
+            50%{
+                background: #000000;
+            }
+            100%{
+                background: #3ec8ff;
+            }
+        }
+        .first_cloud{
+            background-image: url("images/cloud_one.png");
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            animation: cloud_one 20s linear infinite;
+        }
+        @keyframes cloud_one {
+            0%{
+                left: 0px;
+            }
+            100%{
+                left: -100%;
+            }
+        }
+        .second_cloud{
+            background-image: url("images/cloud_two.png");
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            animation: cloud_one 40s linear infinite;
+            background-position: 200px 0px;
+        }
+        @keyframes cloud_two {
+            0%{
+                left: 0px;
+            }
+            100%{
+                left: -100%;
+            }
+        }
+        .third_cloud{
+            background-image: url("images/cloud_two.png");
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            animation: cloud_one 60s linear infinite;
+            background-position: -200px 0px;
+        }
+        @keyframes cloud_three {
+            0%{
+                left: 0px;
+            }
+            100%{
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="sky">
+    <div class="first_cloud"></div>
+    <div class="second_cloud"></div>
+    <div class="third_cloud"></div>
+</div>
+</body>
+</html>
